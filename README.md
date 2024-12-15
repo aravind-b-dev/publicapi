@@ -1,22 +1,22 @@
 
-The data flow works like this:
+The data flow works like this:(Posts)
 
 .......
 
 
-PostListScreen loads and requests data from PostProvider
+-PostListScreen loads and requests data from PostProvider
 
-PostProvider gets data from Repository
+-PostProvider gets data from Repository
 
-Repository gets data from DataSource
+-Repository gets data from DataSource
 
-DataSource makes API call and returns PostModels
+-DataSource makes API call and returns PostModels
 
-Data flows back up through each layer
+-Data flows back up through each layer
 
-PostProvider updates state
+-PostProvider updates state
 
-UI rebuilds with new data
+-UI rebuilds with new data
 
 
 1.Dependency Injection (DI) with GetIt
