@@ -3,6 +3,7 @@ The data flow works like this:
 
 .......
 
+
 PostListScreen loads and requests data from PostProvider
 
 PostProvider gets data from Repository
