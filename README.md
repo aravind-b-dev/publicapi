@@ -1,4 +1,24 @@
-1. Dependency Injection (DI) with GetIt
+
+The data flow works like this:
+
+.......
+
+PostListScreen loads and requests data from PostProvider
+
+PostProvider gets data from Repository
+
+Repository gets data from DataSource
+
+DataSource makes API call and returns PostModels
+
+Data flows back up through each layer
+
+PostProvider updates state
+
+UI rebuilds with new data
+
+
+1.Dependency Injection (DI) with GetIt
    ....................................
    
  injection_container.dart
