@@ -1,3 +1,5 @@
+//This is your core business object that defines what a Post is.
+
 class Post {
   final int userId;
   final int id;

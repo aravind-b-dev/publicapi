@@ -10,10 +10,12 @@ class PostListScreen extends StatefulWidget {
 }
 
 class _PostListScreenState extends State<PostListScreen> {
+
   @override
   void initState() {
     super.initState();
     context.read<PostProvider>().fetchPosts();
+    // Provider.of<PostProvider>(context, listen: false).fetchPosts(); // Old way
   }
 
   @override
