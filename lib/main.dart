@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'app/app.dart';
 import 'core/di/injection_container.dart';
-import 'counter.dart';
-import 'counter_provider.dart';
+
 import 'features/comments/presentation/providers/comment_provider.dart';
 import 'features/home/presentation/providers/home_provider.dart';
 
@@ -19,20 +18,9 @@ Future<void> main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => sl<CommmentProvider>(),),
         ChangeNotifierProvider(create: (_) => HomeProvider(),),
-        // ChangeNotifierProvider(create: (_) => CounterProvider(),),
-
-
       ],
-
       child: const MyApp(),
 
-      // child: MaterialApp(
-      //   title: 'Counter App',
-      //   theme: ThemeData(
-      //     primarySwatch: Colors.blue,
-      //   ),
-      //   home: const MyHomePage(),
-      // ),
     ),
   );
 }
