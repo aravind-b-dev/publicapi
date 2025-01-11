@@ -4,27 +4,18 @@ import 'package:publicapiapp/features/comments/presentation/providers/comment_pr
 
 import 'comment_detail_screen.dart';
 
-class CommentListScreen extends StatefulWidget {
+class CommentListScreen extends StatelessWidget {
   const CommentListScreen({super.key});
 
-  @override
-  State<CommentListScreen> createState() => _CommentListScreenState();
-}
-
-class _CommentListScreenState extends State<CommentListScreen> {
-  @override
-  void initState() {
-    super.initState();
-    context.read<CommmentProvider>().fetchComments();
-  }
-
+  // @override
   @override
   Widget build(BuildContext context) {
+    context.read<CommmentProvider>().fetchComments();
     return Scaffold(
       appBar: AppBar(
         title: const Text("Comments"),
       ),
-      body: Consumer<CommmentProvider>(builder: (context, provider, child) {
+      body: Consumer<CommmentProvider>(builder: (ctx, provider, child) {
         if (provider.isLoading) {
           return const Center(
             child: CircularProgressIndicator(),

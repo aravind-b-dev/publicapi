@@ -7,3 +7,4 @@ abstract class CommentRepository{
   Future<List<Comment>> getComments();
   Future<CommentModel> getCommentById(int id);
 }
+
